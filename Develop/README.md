@@ -1,5 +1,25 @@
 # Unit 17 NoSQL Homework: Workout Tracker
 
+-Mongo db, set up the seeds,
+-routes, seeder files, models folder
+-run npm i, packages listed that we are meant to be running
+-stats.js on the backend does api calls
+
+
+need to serve the pages, (solved has a view folder?), the old way res.sendfile, path.join
+!! checkout week 11, hot restaurant exercise, htmlRoutes.js for res.sendfile
+
+view.js is basically html routes
+
+make sure mongoose is installed
+
+make sure mongo db atlas is installed which is just like jaws db, a little more complicated, account required
+
+
+
+
+HAVE TO DEPLOY TO HEROKU WITH MONGO DB INCORPORATED... can find info in the important folder on gitlab
+
 For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 
 ## User Story
