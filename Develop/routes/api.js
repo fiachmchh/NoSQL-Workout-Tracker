@@ -40,15 +40,12 @@ router.post("/api/workouts", ({ body }, res) => {
       ).then(function(data) {
         res.json(data)
       })
-
-    // Workout.create({})
-    //   .then(dbWorkout => {
-    //     res.json(dbWorkout);
-    //   })
-    //   .catch(err => {
-    //     res.status(400).json(err);
-    //   });
   });
+
+  router.get("/stats", ({ body }, res) => {
+    console.log("we hit the route")
+    res.sendFile(path.join(__dirname, '../public', 'stats.html'));
+});
 
 
 // router.post("/api/transaction/bulk", ({ body }, res) => {
