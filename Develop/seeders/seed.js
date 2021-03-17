@@ -1,10 +1,12 @@
 let mongoose = require("mongoose");
 let db = require("../models/workout.js");
 
-mongoose.connect("mongodb://localhost/workout", {
+mongoose.connect("mongodb://localhost/workout", 
+
+{
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
+  // useUnifiedTopology: true,
+  // useCreateIndex: true,
   useFindAndModify: false
 });
 
