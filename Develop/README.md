@@ -16,9 +16,8 @@ make sure mongoose is installed
 make sure mongo db atlas is installed which is just like jaws db, a little more complicated, account required
 
 
-
-
 HAVE TO DEPLOY TO HEROKU WITH MONGO DB INCORPORATED... can find info in the important folder on gitlab
+
 
 For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 
