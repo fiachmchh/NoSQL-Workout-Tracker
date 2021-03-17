@@ -3,9 +3,9 @@ let db = require("../models/workout.js");
 
 mongoose.connect(
 
-  // process.env.ATLAS_URI,
+  process.env.ATLAS_URI,
   
-  "mongodb://localhost/workout", 
+  // "mongodb://localhost/workout", 
 
 {
   useNewUrlParser: true,
