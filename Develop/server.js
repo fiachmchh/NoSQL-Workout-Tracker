@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 const express = require("express");
 const logger = require("morgan");
 
-// require('dotenv').config()
-
 const PORT = process.env.PORT || 8080;
 
 const db = require("./models");
@@ -17,7 +15,6 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-//change mongodb://localhost/"" to my database
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/workout",
   {
