@@ -47,10 +47,23 @@ router.post("/api/workouts", ({ body }, res) => {
     res.sendFile(path.join(__dirname, '../public', 'stats.html'));
 });
 
-// router.get("/api/workouts", ({ body }, res) => {
-//     console.log("we hit the graph route")
-//     Workout.find({})
-//     .sort({ workout: 3 })
+
+// router.get("/api/workouts/range", (req, res) => {
+//       console.log("we hit the graph route")
+//       Workout.find({}),
+//       { $group: { _id : null, sum : { $sum: "$weight" } } });
+//       .then(dbWorkout => {
+//         res.json(dbWorkout);
+//       })
+//       .catch(err => {
+//         res.status(400).json(err);
+//       });
+//     });
+
+
+// router.post("/api/workouts/range", ({ body }, res) => {
+//   console.log("we hit the graph route")
+//   Workout.insertMany(body)
 //     .then(dbWorkout => {
 //       res.json(dbWorkout);
 //     })
@@ -58,6 +71,10 @@ router.post("/api/workouts", ({ body }, res) => {
 //       res.status(400).json(err);
 //     });
 // });
+
+
+
+    
 
 // router.post("/api/transaction/bulk", ({ body }, res) => {
 //   Transaction.insertMany(body)
