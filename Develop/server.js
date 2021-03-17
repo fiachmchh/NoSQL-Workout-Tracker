@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const logger = require("morgan");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const PORT = process.env.PORT || 8080;
 
@@ -16,8 +19,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/workout",
-  // process.env.ATLAS_URI,
+  // process.env.MONGODB_URI || "mongodb://localhost/workout",
+  process.env.ATLAS_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
