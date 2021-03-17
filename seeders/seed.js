@@ -1,9 +1,14 @@
 let mongoose = require("mongoose");
 let db = require("../models/workout.js");
 
+const dotenv = require("dotenv");
+
+dotenv.config();
+console.log('does our .env look ok!!', process.env)
+
 mongoose.connect(
 
-  process.env.ATLAS_URI,
+  "mongodb+srv://chvfeevd829:chvfeevd829@cluster0.at0au.mongodb.net/workout?retryWrites=true&w=majority",
   
   // "mongodb://localhost/workout", 
 

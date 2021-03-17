@@ -48,17 +48,20 @@ router.post("/api/workouts", ({ body }, res) => {
 });
 
 
-// router.get("/api/workouts/range", (req, res) => {
-//       console.log("we hit the graph route")
-//       Workout.find({}),
-//       { $group: { _id : null, sum : { $sum: "$weight" } } });
-//       .then(dbWorkout => {
-//         res.json(dbWorkout);
-//       })
-//       .catch(err => {
-//         res.status(400).json(err);
-//       });
-//     });
+
+
+router.get("/api/workouts/range", (req, res) => {
+      console.log("we hit the graph route")
+      Workout.find({})
+      .limit(8)
+      //{ $group: { _id : null, sum : { $sum: "$weight" } } });
+      .then(dbWorkout => {
+        res.json(dbWorkout);
+      })
+      .catch(err => {
+        res.status(400).json(err);
+      });
+    });
 
 
 // router.post("/api/workouts/range", ({ body }, res) => {
