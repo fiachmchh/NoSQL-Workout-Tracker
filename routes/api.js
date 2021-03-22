@@ -8,6 +8,8 @@ router.get("/exercise", ({ body }, res) => {
 });
 
 router.get("/api/workouts", ({ body }, res) => {
+
+
     console.log("we hit the 2nd route")
     Workout.find({})
     .sort({ day: -1 })
@@ -21,6 +23,8 @@ router.get("/api/workouts", ({ body }, res) => {
 });
 
 router.post("/api/workouts", ({ body }, res) => {
+
+
     Workout.create({})
       .then(dbWorkout => {
         res.json(dbWorkout);
@@ -28,6 +32,8 @@ router.post("/api/workouts", ({ body }, res) => {
       .catch(err => {
         res.status(400).json(err);
       });
+
+
   });
 
   router.put("/api/workouts/:id", (req, res) => {
